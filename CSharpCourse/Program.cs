@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using System; // not necessary
+
+namespace CSharpCourse
+{
+    class Beninging
+    {
+        private static void Main(string[] args)
+        {
+            Console.WriteLine("Ini thi beninging");
+        }
+    }
+}
