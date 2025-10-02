@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,6 +41,13 @@ namespace CSharpCourse
             foreach (var number in list)
             {
                 AnsiConsole.WriteLine(number);
+            }
+
+            var hash = new Hashtable(){ {"first", "value"}, {"second", "sebring"} };
+
+            foreach (var entry in hash)
+            {
+                AnsiConsole.WriteLine(entry.ToString());
             }
         }
 
