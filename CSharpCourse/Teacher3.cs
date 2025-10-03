@@ -2,7 +2,7 @@ namespace CSharpCourse;
 
 public class Teacher3: Person2
 {
-    public string Subject { get; set; }
+    private string Subject { get; set; }
 
     public Teacher3(string name, string surname, string subject) : base(name, surname)
     {
