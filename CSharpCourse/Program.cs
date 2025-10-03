@@ -1,20 +1,18 @@
-﻿using System.Collections;
-using Spectre.Console;
-
+﻿
 namespace CSharpCourse
 {
     class Beninging
     {
         private static void Main(string[] args)
         {
-            string alpaca;
-            alpaca = "alpaca";
-            var sas = 8;
-            var num1 = 5;
-            var num2 = 10;
-            var sum = num1 + num2;
+            // string alpaca;
+            // alpaca = "alpaca";
+            // var sas = 8;
+            // var num1 = 5;
+            // var num2 = 10;
+            // var sum = num1 + num2;
             // AnsiConsole.WriteLine(sum);
-            const int num = 12;
+            // const int num = 12;
             // AnsiConsole.WriteLine($"{alpaca} {sas}");
             // AnsiConsole.WriteLine(sas + num);
             // AnsiConsole.WriteLine("Ini thi beninging");
@@ -46,13 +44,19 @@ namespace CSharpCourse
                 // AnsiConsole.WriteLine(entry.ToString());
             }
 
-            var dude = new Person("Giorgio", 24);
+            var dude = new Person("Giorgio", "Ubaldi", 24);
             dude.Print();
             
             string greeting = dude.Greet();
             AnsiConsole.WriteLine(greeting);
-            Console.WriteLine(Person.numeroPersone);
 
+            var genericTeacher = new Teacher("Andrea", "Torrisi", 47, "Analisi 1");
+            genericTeacher.Print();
+            string teacherGreeting = genericTeacher.Greet();
+            AnsiConsole.WriteLine(teacherGreeting);
+
+            var theCsTeacher = new CsTeacher("Giacomo", "Marinozzi", 33, "Programmazione", "C#");
+            theCsTeacher.Print();
         }
 
         private static double Sum(double x, int y)

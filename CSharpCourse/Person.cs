@@ -2,19 +2,26 @@ namespace CSharpCourse;
 
 public class Person
 {
-    public string Name { get; private set; } 
-    public int Age { get; private set; }
-
-    public static int numeroPersone;
+    [JsonProperty(Order = 1)]
+    public string Name { get; set; } 
     
-    public Person(string name, int age)
+    [JsonProperty(Order = 2)]
+    public string Surname { get; set; }
+    
+    [JsonProperty(Order = 3)]
+    public int Age { get; set; }
+    
+    public static int NumeroPersone;
+    
+    public Person(string name, string surname, int age)
     {
         Name = name;
+        Surname = surname;
         Age = age;
-        numeroPersone++;
+        NumeroPersone++;
     }
 
-    public string Greet()
+    public virtual string Greet()
     {
         return $"- Hey there {Name}, how old are you?\n" +
                $"- I'm {Age} years old";
