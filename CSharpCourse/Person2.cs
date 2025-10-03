@@ -15,6 +15,11 @@ public class Person2
     {
         AnsiConsole.WriteLine($"Hi dude I'm {Name} {Surname}");
     }
+    
+    public string StringSalute()
+    {
+        return $"Hi dude I'm {Name} {Surname}";
+    }
 
     private void Cook() // accessible only in the class where it is defined, must encapsulate if needed elsewhere
     {
