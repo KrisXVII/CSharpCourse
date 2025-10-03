@@ -1,5 +1,5 @@
-﻿
-namespace CSharpCourse
+﻿namespace CSharpCourse
+    
 {
     class Beninging
     {
@@ -57,6 +57,23 @@ namespace CSharpCourse
 
             var theCsTeacher = new CsTeacher("Giacomo", "Marinozzi", 33, "Programmazione", "C#");
             theCsTeacher.Print();
+
+            var student = new Student("Angelo", "Mariani", 19, "UniPD", "2A");
+            student.Print();
+            string studGreet = student.Greet();
+            AnsiConsole.WriteLine(studGreet);
+
+            var people = new List<Person2> // List of records inheriting from the same class
+            {
+                new Student2("Luca", "Rossi", "4A"),
+                new Teacher3("Anna", "Neri", "Storia")
+            };
+
+            foreach (Person2 person2 in people)
+            {
+                person2.Salute();
+            }
+            
         }
 
         private static double Sum(double x, int y)
