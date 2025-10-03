@@ -1,13 +1,10 @@
-
-using System;
-using System.Collections;
-using ObjectDumper; // not necessary
+﻿using System.Collections;
 using Spectre.Console;
 
 namespace CSharpCourse
 {
     class Beninging
-    { 
+    {
         private static void Main(string[] args)
         {
             string alpaca;
@@ -26,7 +23,7 @@ namespace CSharpCourse
 
             var array = new ArrayList();
             array.Add("ossas");
-            
+
             foreach (object item in array)
             {
                 // AnsiConsole.WriteLine(item.ToString());
@@ -42,17 +39,26 @@ namespace CSharpCourse
                 // AnsiConsole.WriteLine(number);
             }
 
-            var hash = new Hashtable(){ {"first", "value"}, {"second", "sebring"} };
+            var hash = new Hashtable() { { "first", "value" }, { "second", "sebring" } };
 
             foreach (var entry in hash)
             {
                 // AnsiConsole.WriteLine(entry.ToString());
             }
+
+            var dude = new Person("Giorgio", 24);
+            dude.Print();
+            
+            string greeting = dude.Greet();
+            AnsiConsole.WriteLine(greeting);
+            Console.WriteLine(Person.numeroPersone);
+
         }
 
         private static double Sum(double x, int y)
         {
             return x + y;
         }
+
     }
 }
